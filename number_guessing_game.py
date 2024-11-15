@@ -12,23 +12,25 @@ comp_guess = randint(1,100)
 count = 0
 # while true loop
 while True:
-    # user input and turn it into integer
-    user_input = int(input('Guess the number between 1 and 100: '))
-    # if user input is between 1 and 100
-    if user_input >= 1 and user_input <= 100:
-        # if user input greater than computer guess
-        if user_input > comp_guess:
-            print("Too High!")
-        # if user input less than computer guess
-        if user_input < comp_guess:
-            print("Too Low!")
-        # if user input equals computer guess
-        if user_input == comp_guess:
-            print(f"Congratulations! You guessed the number in {count+1} try!")
-            break
-    # else ask to enter a valid number
-    else:
-        print("Please enter a valid number.")
-
+    try:
+        # user input and turn it into integer
+        user_input = int(input('Guess the number between 1 and 100: '))
+        # if user input is between 1 and 100
+        if user_input >= 1 and user_input <= 100:
+            # if user input greater than computer guess
+            if user_input > comp_guess:
+                print("Too High!")
+            # if user input less than computer guess
+            if user_input < comp_guess:
+                print("Too Low!")
+            # if user input equals computer guess
+            if user_input == comp_guess:
+                print(f"Congratulations! You guessed the number in {count+1} try!")
+                break
+        # else ask to enter a valid number
+        else:
+            print("Please enter a valid number.")
+    except ValueError:
+        print("Please enter a integer between 1 and 100")
     # run the couter
     count += 1
