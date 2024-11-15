@@ -13,9 +13,7 @@ emojis = {ROCK: "🪨", PAPER: "📄", SCISSOR: "✄"}
 item_list = tuple(emojis.keys())
 
 # counter for scoring
-game_wins = 0
-game_loses = 0
-game_ties = 0
+game_wins = game_loses = game_ties = 0
 
 def display_choices(user_input, comp_guess):
     # print what user choose
