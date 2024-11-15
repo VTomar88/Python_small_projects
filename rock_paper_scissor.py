@@ -2,11 +2,15 @@
 # Varsha Tomar 15 Nov 2024
 import random
 
-# List of items stored in immutable tuple 
-item_list = ('r', 'p', 's')
+ROCK = 'r'
+PAPER = 'p'
+SCISSOR = 's'
 
 # Dict to store emojis for items
-emojis = {"r": "🪨", "p": "📄", "s": "✄"}
+emojis = {ROCK: "🪨", PAPER: "📄", SCISSOR: "✄"}
+
+# List of items stored in immutable tuple 
+item_list = tuple(emojis.keys())
 
 # counter for scoring
 game_wins = 0
@@ -26,9 +30,9 @@ def compare_results(user_input, comp_guess):
         print("Tie!")
         game_ties += 1
     # else if user = p/r/s and user r/s/p 
-    elif ((user_input=='p' and comp_guess=='r') or 
-        (user_input=='r' and comp_guess=='s') or 
-        (user_input=='s' and comp_guess=='p')):
+    elif ((user_input==PAPER and comp_guess==ROCK) or 
+        (user_input==ROCK and comp_guess==SCISSOR) or 
+        (user_input==SCISSOR and comp_guess==PAPER)):
         print('You Win')
         game_wins += 1
     else:
