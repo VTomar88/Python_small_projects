@@ -2,16 +2,19 @@
 Emoji converter converts short messages to emojis if present in dictionary. Else, the word
 remians same.
 """
-emojis = {
-    ":)": "😊",
-    ":(": "😔",
-    ";)": "😜"
-}
+def emjoi_converter(message):
+    emojis = {
+        ":)": "😊",
+        ":(": "😔",
+        ";)": "😜"
+    }
+    words = message.split(" ")
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output
 
+# Get the user input
 user = input("> ")
-words = user.split(" ")
-output = ""
-for word in words:
-    output += emojis.get(word, word) + " "
 
-print(output)
+print(emjoi_converter(user))
