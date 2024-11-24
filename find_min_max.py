@@ -2,7 +2,7 @@
 The functions in this script find maximum and minimum numbers in a list.
 """
 
-def max(list):
+def max_num(list):
     """
     Finds the maximum number in the list
     input: list with numbers
@@ -21,7 +21,7 @@ def max(list):
             continue
     return max_num
 
-def min(list):
+def min_num(list):
     """
     Finds the minimum number in the list
     input: list with numbers
