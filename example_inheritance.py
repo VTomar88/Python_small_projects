@@ -78,27 +78,35 @@ class NetworkStream(Stream):
 
 # Usage
 # Using FileStream
-try:
-    file_stream = FileStream()
-    file_stream.opened()  # Open the stream
-    file_stream.read()    # Read from the file
-    file_stream.closed()  # Close the stream
+def main():
+    """
+    Main function to demonstrate the usage of Class inheritance
+    """
+    try:
+        file_stream = FileStream()
+        file_stream.opened()  # Open the stream
+        file_stream.read()    # Read from the file
+        file_stream.closed()  # Close the stream
 
-    # Attempting to close an already closed stream
-    file_stream.closed()
-except InvalidOperatorError as e:
-    print(f"Error: {e}")
+        # Attempting to close an already closed stream
+        file_stream.closed()
+    except InvalidOperatorError as e:
+        print(f"Error: {e}")
 
-print("\n")
+    print("\n")
 
-# Using NetworkStream
-try:
-    network_stream = NetworkStream()
-    network_stream.opened()  # Open the stream
-    network_stream.read()    # Read from the network
-    network_stream.closed()  # Close the stream
+    # Using NetworkStream
+    try:
+        network_stream = NetworkStream()
+        network_stream.opened()  # Open the stream
+        network_stream.read()    # Read from the network
+        network_stream.closed()  # Close the stream
 
-    # Attempting to open an already open stream
-    network_stream.opened()
-except InvalidOperatorError as e:
-    print(f"Error: {e}")
+        # Attempting to open an already open stream
+        network_stream.opened()
+    except InvalidOperatorError as e:
+        print(f"Error: {e}")
+
+
+if __name__ == '__main__':
+    main()

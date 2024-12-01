@@ -1,5 +1,6 @@
 """
-Abstract Base Classes (ABCs) are relevant when we want to enforce a consistent interface
+Abstract Base Classes (ABC) 
+ABC are relevant when we want to enforce a consistent interface
 or behaviour acrosss multiple classes.
 This is example for a payement system where all payment gateways must implement certain
 methods like 'authenticate' and 'process_payment'.

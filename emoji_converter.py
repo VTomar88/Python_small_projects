@@ -3,6 +3,7 @@ Emoji converter converts short messages to emojis if present in dictionary. Else
 remians same.
 """
 def emjoi_converter(message):
+    """An emoji converter function."""
     emojis = {
         ":)": "😊",
         ":(": "😔",

@@ -1,0 +1,1 @@
+This directory is just for example only and is used with understand_path.py. It has list of different empty files. 

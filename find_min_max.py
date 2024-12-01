@@ -1,4 +1,4 @@
-"""
+"""Find min and max numbers
 The functions in this script find maximum and minimum numbers in a list.
 """
 
